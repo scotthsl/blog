@@ -13,4 +13,9 @@
 * [Skills](skills/README.md)
     * Git
         * [github中根据upstream更新fork的仓库](skills/git/update-repo-per-upstream.md)
+    * Performance
+        * [应用程序性能调优总结](skills/performance/app-profiling.md)
+* [Technology](tech/README.md)
+    * Zigbee
+        * [Zigbee组网总结](tech/zigbee/organizing-network.md)
 
