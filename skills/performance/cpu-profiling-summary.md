@@ -36,7 +36,7 @@
 
 ### 2.1 uptime
 
-![cpu-profiling-uptime-1](E:\blog\pictures\cpu-profiling-uptime-1.PNG)
+![cpu-profiling-uptime-1](cpu-profiling-uptime-1-1556942717890.PNG)
 
 uptime提供几个有用的信息，第一个是系统系统当前时间和启动以来的时间，第二个是 平均负载。这里关注平均负载：
 
@@ -50,5 +50,68 @@ uptime提供几个有用的信息，第一个是系统系统当前时间和启�
 
 ### 2.2 vmstate
 
-![cpu-profiling-vmstat-1](E:\blog\pictures\cpu-profiling-vmstat-1.PNG)
+![cpu-profiling-vmstat-1](cpu-profiling-vmstat-1.PNG)
+
+* r：运行队列长度
+* us：用户态时间
+* sy：内核态时间
+* id：空闲时间
+* wa：等待IO的时间
+* st：CPU在虚拟化的环境下其它租户上的开销
+
+CPU真正干活的时间是 **us + sy** 的时间，空闲的时间是  **wa + id **。
+
+### 2.3 mpstat
+
+mpstat能报告每个CPU的统计信息。使用**-P ALL**选项打印所有CPU的统计信息，可以手动指定打印间隔的时间。如下为每秒打印一次。
+
+![cpu-profiling-mpstat-1](cpu-profiling-mpstat-1.PNG)
+
+输出列：
+
+* CPU：CPU逻辑ID，第一行为所有CPU的总结信息
+* %usr：用户态时间
+* %nice：以nice优先级运行的进程的用户态时间
+* %sys：系统态时间
+* %iowait：等待IO的时间
+* %irq：硬件中断的处理程序占用的时间
+* %soft：软中断CPU用量
+* %steal：耗费在服务其它租户的时间
+* %guest：耗费在访客虚拟机的时间
+* %gnice：访客虚拟机nice级别进程所花费的时间
+* %idle：空闲时间
+
+嵌入式中不用关心虚拟化相关参数。CPU不干活的时间：**iowait + idle**。
+
+### 2.4 sar - 系统活动报告器
+
+用法
+
+* -P ALL 与mpstate结果相同
+
+* -q 包括运行队列长度等信息
+
+    * runq-sz：运行队列长度
+    * plist-sz：任务队列中的任务数
+    * 中间三列分别为1，5，15分钟的平均负载
+    * blocked：等待 IO完成的线程数
+
+    ![cpu-profiling-sar-1](cpu-profiling-sar-1.PNG)
+
+### 2.5 ps - process status
+
+用于查看进程状态
+
+![cpu-profiling-ps-1](cpu-profiling-ps-1.PNG)
+
+CPU用量主要看 **%CPU** 和 **TIME** 这两列。
+
+* %CPU：进程在前一秒内在所有CPU上的CPU用量之和，假设系统有4个CPU，然后进程中的所有线程完全占满CPU，则对于单线程进程，这里是100%，如果是双线程进程，这里是200%。
+* TIME：进程从创建开始消耗的CPU总时间。
+
+### 2.6 top
+
+​		top输出信息较多，有系统启动时间，平均负载，CPU用量分布，进程/线程状态等信息。但是top本身会消耗较多CPU，因为其获得的信息是通过不断调用open(), read(), close()这几个系统调用来遍历 /proc 下存储进程相关信息的文件来实现的。
+
+​		top可能会错过一些寿命较短的进程。Linux上可以通过 **atop** 来获得那些可能被 top 忽略的短命进程。
 
