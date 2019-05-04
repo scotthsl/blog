@@ -36,7 +36,7 @@
 
 ### 2.1 uptime
 
-![捕获](C:\Users\scott\Desktop\捕获.PNG)
+![cpu-profiling-uptime-1](E:\blog\pictures\cpu-profiling-uptime-1.PNG)
 
 uptime提供几个有用的信息，第一个是系统系统当前时间和启动以来的时间，第二个是 平均负载。这里关注平均负载：
 
@@ -50,5 +50,5 @@ uptime提供几个有用的信息，第一个是系统系统当前时间和启�
 
 ### 2.2 vmstate
 
-![1](C:\Users\scott\Desktop\1.PNG)
+![cpu-profiling-vmstat-1](E:\blog\pictures\cpu-profiling-vmstat-1.PNG)
 
