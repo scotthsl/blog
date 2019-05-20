@@ -18,6 +18,8 @@
 
    git  pull  upstream master
 
-5. 将拉下来的改动退到fork出来的仓库
+5. 将新分支中的上游的commit合并到本地master分支中，需要注意是否会覆盖本地的改动。
 
-   git push origin newbranch
+6. 将新的commit合并到本地master分支后，再将改动推入到自己的远程仓库中
+
+   git push origin master
