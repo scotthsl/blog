@@ -16,6 +16,8 @@
     * Performance
         * [应用程序性能调优总结](skills/performance/app-profiling.md)
         * [CPU性能调优总结](skills/performance/cpu-profiling-summary.md)
+    * ubuntu
+        * [联想Y7000双硬盘安装win10+ubuntu18.04](skills/ubuntu/install-ubu1804-on-y7000.md)
 * [Technology](tech/README.md)
     * Zigbee
         * [Zigbee组网总结](tech/zigbee/organizing-network.md)
