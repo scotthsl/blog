@@ -18,8 +18,10 @@
         * [CPU性能调优总结](skills/performance/cpu-profiling-summary.md)
     * ubuntu
         * [联想Y7000双硬盘安装win10+ubuntu18.04](skills/ubuntu/install-ubu1804-on-y7000.md)
+        * [tmux配置](skills/ubuntu/tmux-configs.md)
     * Vim
         * [taglist配置](skills/vim/taglist.md)
+        * [cscope笔记](skills/vim/cscope-notes.md)
 * [Technology](tech/README.md)
     * Zigbee
         * [Zigbee组网总结](tech/zigbee/organizing-network.md)
