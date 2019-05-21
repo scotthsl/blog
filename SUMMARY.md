@@ -19,10 +19,14 @@
     * ubuntu
         * [联想Y7000双硬盘安装win10+ubuntu18.04](skills/ubuntu/install-ubu1804-on-y7000.md)
         * [tmux配置](skills/ubuntu/tmux-configs.md)
+        * [XFCE桌面快捷键](skills/ubuntu/xfce-shortcut-keys.md)
     * Vim
         * [taglist配置](skills/vim/taglist.md)
         * [cscope笔记](skills/vim/cscope-notes.md)
 * [Technology](tech/README.md)
     * Zigbee
         * [Zigbee组网总结](tech/zigbee/organizing-network.md)
+* [Boards](boards/README.md)
+    * JZ2440
+        * [u-boot 打补丁及编译](boards/jz2440/uboot-patch-build.md)
 
