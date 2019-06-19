@@ -32,6 +32,10 @@
 * [Technology](tech/README.md)
     * Zigbee
         * [Zigbee组网总结](tech/zigbee/organizing-network.md)
+    * 3Dprinter
+        * [marlin配置学习](tech/3dprinter/marlin-cfg.md)
+    * CAN/CAN-FD
+        * [CAN总线协议总结](tech/can/can-proto-summay.md)
 * [Boards](boards/README.md)
     * JZ2440
         * [u-boot 打补丁及编译](boards/jz2440/uboot-patch-build.md)
