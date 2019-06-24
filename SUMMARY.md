@@ -43,4 +43,9 @@
         * [构建根文件系统](boards/jz2440/build-rootfs.md)
     * Vexpress-A9
         * [构建 QEMU Vexpress Cortex-A9 最小系统](boards/vexpress-a9/build-kernel-rootfs-on-qemu.md)
+* Programing
+    * python
+        * [python学习笔记——基础知识](programing/python/learning-basic.md)
+    * maple
+        * [arduino-stm32-maple库结构分析](programing/maple/arduino-stm32-maple-sketch.md)
 
